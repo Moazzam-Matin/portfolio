@@ -222,20 +222,25 @@ nav {
 
     background:
         radial-gradient(
-            circle at 10% 20%,
-            rgba(37, 99, 235, 0.09),
-            transparent 30%
+            circle at 82% 28%,
+            rgba(45, 212, 190, 0.20) 0%,
+            rgba(45, 212, 191, 0) 34%
         ),
         radial-gradient(
-            circle at 85% 75%,
-            rgba(15, 157, 154, 0.10),
-            transparent 32%
+            circle at 18% 70%,
+            rgba(37, 100, 235, 0.35) 0%,
+            rgba(37, 99, 235, 0) 42%
+        ),
+        radial-gradient(
+            circle at 65% 80%,
+            rgba(99, 101, 241, 0.45) 0%,
+            rgba(99, 102, 241, 0) 38%
         ),
         linear-gradient(
             135deg,
-            #EAF6FA 0%,
-            #E5F3F8 55%,
-            #E7F7F4 100%
+            #0b1f33 0%,
+            #123f63 42%,
+            #087f7b 100%
         );
 }
 
@@ -337,21 +342,22 @@ nav {
    ========================================================= */
 
 .system-visual {
-    padding: 30px;
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(46%, 560px);
 
-    border-radius: 18px;
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 0;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.75),
-            rgba(220, 242, 247, 0.65)
-        );
+    filter: saturate(0.7);
+}
 
-    border: 1px solid rgba(11, 31, 51, 0.10);
-
-    box-shadow:
-        0 30px 70px rgba(11, 31, 51, 0.10);
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .system-node {
