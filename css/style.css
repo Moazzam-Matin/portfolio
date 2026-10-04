@@ -528,6 +528,10 @@ nav {
 }
 
 .project-card {
+
+    position: relative;
+    overflow: hidden;
+
     min-height: 420px;
 
     padding: 30px;
@@ -550,6 +554,27 @@ nav {
         transform 0.25s ease,
         border-color 0.25s ease,
         box-shadow 0.25s ease;
+}
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--project-image, none);
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.14;
+
+    pointer-events: none;
+}
+
+
+.project-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .project-card:hover {
@@ -605,7 +630,7 @@ nav {
     font-size: 0.9rem;
     line-height: 1.72;
 
-    color: #AABAC9;
+    color: #ccd4e1;
 }
 
 .project-stack {
