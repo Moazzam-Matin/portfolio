@@ -755,39 +755,6 @@ nav {
 
 
 /* =========================================================
-   PHILOSOPHY
-   ========================================================= */
-
-.philosophy {
-    padding: 135px max(24px, calc((100vw - 950px) / 2));
-
-    text-align: center;
-
-    background: var(--navy);
-
-    color: white;
-}
-
-.philosophy .eyebrow {
-    color: #6EA8FF;
-}
-
-.philosophy blockquote {
-    margin-top: 25px;
-
-    font-size: clamp(2rem, 4.2vw, 3.7rem);
-
-    line-height: 1.12;
-
-    letter-spacing: -0.05em;
-
-    font-weight: 650;
-
-    color: white;
-}
-
-
-/* =========================================================
    EXPERIENCE
    ========================================================= */
 
@@ -1002,6 +969,26 @@ nav {
     background: rgba(255, 255, 255, 0.12);
 }
 
+.open-source-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.open-source-logo img {
+    width: 350px;
+    height: auto;
+    display: block;
+}
+
+.button-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    margin-right: 8px;
+}
+
 
 /* =========================================================
    ABOUT
@@ -1098,6 +1085,27 @@ nav {
 .cta .button-secondary:hover {
     background: rgba(255, 255, 255, 0.12);
 }
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+
+    text-decoration: none;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
 
 
 /* =========================================================
