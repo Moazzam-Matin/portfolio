@@ -233,7 +233,6 @@ nav {
     display: flex;
     align-items: center;
     background:
-    background:
         radial-gradient(circle at 18% 22%, rgba(37, 99, 235, 0.18) 0%, transparent 40%),
         radial-gradient(circle at 82% 65%, rgba(45, 212, 190, 0.12) 0%, transparent 45%),
         linear-gradient(180deg, #07131F 0%, #0B1F33 100%);
@@ -254,7 +253,6 @@ nav {
     );
     pointer-events: none;
     z-index: 1;
-}
 }
 
 .hero-content {
@@ -310,7 +308,7 @@ nav {
 }
 
 .button:hover {
-    transform: translateY(calc(-50% - 2px));
+    transform: translateY(-2px);
 }
 
 .button-primary {
@@ -372,7 +370,7 @@ nav {
         0 30px 60px -8px rgba(0, 0, 0, 0.65),
         inset 0 1px 2px rgba(255, 255, 255, 0.40),
         0 0 32px rgba(56, 189, 248, 0.18);
-    transform: translateY(-2px);
+    transform: translateY(calc(-50% - 2px));
 }
 
 /* Glass specular glare reflection */
