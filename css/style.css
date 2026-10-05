@@ -493,12 +493,12 @@ nav {
     padding: 14px 0;
     display: flex;
     align-items: center;
-    background: #06111C;
+    background: #c7d2d4;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, rgb(80, 77, 110) 8%, rgb(130, 119, 156) 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, rgb(94, 91, 98) 8%, rgb(73, 71, 79) 92%, transparent);
 }
 
 .technology-track {
@@ -522,13 +522,13 @@ nav {
     height: 20px;
     display: block;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 2px 4px rgb(151, 134, 134));
 }
 
 .technology-item span {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--text-secondary);
+    color: #0b0f13;
 }
 
 @keyframes technology-marquee {
