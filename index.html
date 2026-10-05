@@ -11,6 +11,10 @@
 
     <title>Moazzam Matin | MLOps Engineer</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -46,7 +50,7 @@
         <!-- HERO -->
         <section id="hero">
             <div class="hero-content">
-                <p class="eyebrow">HI, I’m Moazzam</p>
+                <p class="eyebrow">HI, I’M MOAZZAM</p>
                 <h1>
                     I build reliable
                     ML systems and
@@ -76,28 +80,135 @@
                 </div>
             </div>
 
+            <!-- MLOps Lifecycle Iconic Glass View -->
+            <div class="mlops-glass-stage" aria-label="MLOps Production Lifecycle">
+                <div class="glass-glare"></div>
 
-            <div class="system-visual">
-                <div class="system-node">
-                    <strong>DATA</strong>
+                <div class="lifecycle-track">
+                    <!-- 1. DATA -->
+                    <div class="lifecycle-item">
+                        <div class="lifecycle-icon-wrap" title="Data validation and pipelines">
+                            <svg class="lifecycle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <span class="lifecycle-label">Data</span>
+                    </div>
+
+                    <div class="lifecycle-connector">
+                        <span class="connector-line"></span>
+                        <span class="connector-dot"></span>
+                    </div>
+
+                    <!-- 2. DEVELOP -->
+                    <div class="lifecycle-item">
+                        <div class="lifecycle-icon-wrap" title="Code, test, and feature engineering">
+                            <svg class="lifecycle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                                <line x1="14" y1="4" x2="10" y2="20"></line>
+                            </svg>
+                        </div>
+                        <span class="lifecycle-label">Develop</span>
+                    </div>
+
+                    <div class="lifecycle-connector">
+                        <span class="connector-line"></span>
+                        <span class="connector-dot"></span>
+                    </div>
+
+                    <!-- 3. TRAIN -->
+                    <div class="lifecycle-item">
+                        <div class="lifecycle-icon-wrap" title="Training and experiment tracking">
+                            <svg class="lifecycle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="2.2" fill="currentColor"></circle>
+                                <circle cx="12" cy="4" r="1.8"></circle>
+                                <circle cx="19" cy="8" r="1.8"></circle>
+                                <circle cx="19" cy="16" r="1.8"></circle>
+                                <circle cx="12" cy="20" r="1.8"></circle>
+                                <circle cx="5" cy="16" r="1.8"></circle>
+                                <circle cx="5" cy="8" r="1.8"></circle>
+                                <line x1="12" y1="6.2" x2="12" y2="9.8"></line>
+                                <line x1="17.2" y1="9" x2="13.8" y2="10.8"></line>
+                                <line x1="17.2" y1="15" x2="13.8" y2="13.2"></line>
+                                <line x1="12" y1="17.8" x2="12" y2="14.2"></line>
+                                <line x1="6.8" y1="15" x2="10.2" y2="13.2"></line>
+                                <line x1="6.8" y1="9" x2="10.2" y2="10.8"></line>
+                            </svg>
+                        </div>
+                        <span class="lifecycle-label">Train</span>
+                    </div>
+
+                    <div class="lifecycle-connector">
+                        <span class="connector-line"></span>
+                        <span class="connector-dot"></span>
+                    </div>
+
+                    <!-- 4. DEPLOY -->
+                    <div class="lifecycle-item">
+                        <div class="lifecycle-icon-wrap" title="Containerization and serving">
+                            <svg class="lifecycle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <span class="lifecycle-label">Deploy</span>
+                    </div>
+
+                    <div class="lifecycle-connector">
+                        <span class="connector-line"></span>
+                        <span class="connector-dot"></span>
+                    </div>
+
+                    <!-- 5. MONITOR -->
+                    <div class="lifecycle-item">
+                        <div class="lifecycle-icon-wrap" title="Observability and metrics">
+                            <svg class="lifecycle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                                <polyline points="4 9 10 5 15 8 20 2" stroke-width="1.6"></polyline>
+                                <circle cx="20" cy="2" r="1.2" fill="currentColor"></circle>
+                            </svg>
+                        </div>
+                        <span class="lifecycle-label">Monitor</span>
+                    </div>
+
+                    <div class="lifecycle-connector">
+                        <span class="connector-line"></span>
+                        <span class="connector-dot"></span>
+                    </div>
+
+                    <!-- 6. IMPROVE -->
+                    <div class="lifecycle-item">
+                        <div class="lifecycle-icon-wrap" title="Retraining and feedback loop">
+                            <svg class="lifecycle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21.5 2v6h-6"></path>
+                                <path d="M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-1.19"></path>
+                            </svg>
+                        </div>
+                        <span class="lifecycle-label">Improve</span>
+                    </div>
                 </div>
 
-                <div class="system-line"></div>
-
-                <div class="system-node">
-                    <strong>MODEL</strong>
-                </div>
-
-                <div class="system-line"></div>
-
-                <div class="system-node">
-                    <strong>API</strong>
-                </div>
-
-                <div class="system-line"></div>
-
-                <div class="system-node">
-                    <strong>MONITORING</strong>
+                <!-- Continuous feedback loop arrow -->
+                <div class="lifecycle-loop">
+                    <svg class="lifecycle-loop-svg" viewBox="0 0 520 34" fill="none" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="returnGradient" x1="100%" y1="0%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.85" />
+                                <stop offset="50%" stop-color="#2DD4BF" stop-opacity="0.65" />
+                                <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.85" />
+                            </linearGradient>
+                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                <path d="M 0 6 L 5 0 L 10 6 z" fill="#38BDF8" />
+                            </marker>
+                        </defs>
+                        <path d="M 478 2 V 16 C 478 26 468 28 456 28 H 64 C 52 28 42 26 42 16 V 4" stroke="url(#returnGradient)" stroke-width="1.6" fill="none" marker-end="url(#arrow)" />
+                    </svg>
                 </div>
             </div>
         </section>
@@ -283,7 +394,7 @@
 
                 <article
                     class="project-card project-featured"
-                    style="--project-image: url('../assets/projects/gulf-auto-price-intelligence.png');"
+                    style="--project-image: url('assets/projects/gulf-auto-price-intelligence.png');"
                 >
                     <div class="project-meta">
                         <span>01</span>
@@ -354,7 +465,7 @@
 
                 <article
                     class="project-card"
-                    style="--project-image: url('../assets/projects/maarg.png');"
+                    style="--project-image: url('assets/projects/maarg.png');"
                 >
                     <div class="project-meta">
                         <span>03</span>
@@ -388,7 +499,7 @@
 
                 <article
                     class="project-card"
-                    style="--project-image: url('../assets/projects/pyq-concept-graph.png');"
+                    style="--project-image: url('assets/projects/pyq-concept-graph.png');"
                 >
                     <div class="project-meta">
                         <span>04</span>
@@ -572,27 +683,29 @@
         <section class="section open-source">
 
             <div class="section-heading">
-                <p class="eyebrow">OPEN SOURCE</p>
-                <h2 class="open-source-logo">
-                    <img
-                        src="assets/maarg_logo_dark.svg"
-                        alt="maarg"
-                    >
-                </h2>
+                <p class="eyebrow">OPEN SOURCE TOOLING</p>
+                <h2>Featured Project: maarg</h2>
             </div>
 
             <div class="open-source-content">
 
-                <div>
-                    <p class="open-source-version">
-                        v0.3.1 · PyPI
-                    </p>
+                <div class="open-source-main">
+                    <div class="open-source-header">
+                        <img
+                            src="assets/maarg_logo_dark.svg"
+                            alt="maarg logo"
+                            class="open-source-logo-img"
+                        >
+                        <span class="open-source-version">
+                            v0.3.1 · PyPI
+                        </span>
+                    </div>
 
                     <p>
                         Lightweight experiment tracking for Python with zero
                         instrumentation. maarg captures inputs, metrics, artifacts,
-                        execution time, and failures while keeping the developer
-                        workflow simple.
+                        execution time, and failures while keeping developer
+                        workflows clean and fully reproducible.
                     </p>
                 </div>
                 <div class="open-source-actions">
