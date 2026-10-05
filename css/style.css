@@ -230,20 +230,37 @@ nav {
 #hero {
     min-height: 82vh;
     padding: 104px max(24px, calc((100vw - var(--max-width)) / 2)) 52px;
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    display: flex;
     align-items: center;
-    gap: 40px;
+    background:
     background:
         radial-gradient(circle at 18% 22%, rgba(37, 99, 235, 0.18) 0%, transparent 40%),
         radial-gradient(circle at 82% 65%, rgba(45, 212, 190, 0.12) 0%, transparent 45%),
         linear-gradient(180deg, #07131F 0%, #0B1F33 100%);
     position: relative;
+    overflow: hidden;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(7, 19, 31, 0.92) 0%,
+        rgba(7, 19, 31, 0.68) 42%,
+        rgba(7, 19, 31, 0.30) 72%,
+        rgba(7, 19, 31, 0.18) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    width: min(620px, 100%);
 }
 
 #hero .eyebrow {
@@ -293,7 +310,7 @@ nav {
 }
 
 .button:hover {
-    transform: translateY(-2px);
+    transform: translateY(calc(-50% - 2px));
 }
 
 .button-primary {
@@ -325,8 +342,11 @@ nav {
    ========================================================= */
 
 .mlops-glass-stage {
-    position: relative;
-    padding: 32px 22px 22px;
+    position: absolute;
+    top: 50%;
+    right: max(20px, calc((100vw - var(--max-width)) / 2 - 20px));
+    width: min(900px, 62vw);
+    padding: 42px 32px 28px;
     border-radius: 20px;
     background: rgba(8, 22, 40, 0.48);
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -339,6 +359,9 @@ nav {
         inset 0 -1px 1px rgba(0, 0, 0, 0.35),
         0 0 24px rgba(56, 189, 248, 0.08);
     overflow: hidden;
+    z-index: 2;
+    transform: translateY(-50%);
+    opacity: 0.78;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1061,16 +1084,14 @@ footer > div:first-child span {
     }
 
     #hero {
-        grid-template-columns: 1fr;
-        gap: 36px;
-        min-height: auto;
+        min-height: 620px;
         padding-top: 96px;
     }
 
     .mlops-glass-stage {
-        max-width: 580px;
-        margin: 0 auto;
-        width: 100%;
+        right: 20px;
+        width: min(720px, calc(100% - 40px));
+        opacity: 0.52;
     }
 
     .capabilities-grid {
@@ -1110,8 +1131,17 @@ footer > div:first-child span {
     }
 
     #hero {
+        min-height: 690px;
         padding: 86px 20px 42px;
-        gap: 32px;
+    }
+
+    #hero::after {
+        background: linear-gradient(
+            180deg,
+            rgba(7, 19, 31, 0.82) 0%,
+            rgba(7, 19, 31, 0.62) 48%,
+            rgba(7, 19, 31, 0.76) 100%
+        );
     }
 
     #hero h1 {
@@ -1131,9 +1161,19 @@ footer > div:first-child span {
     }
 
     .mlops-glass-stage {
+        top: 54%;
+        right: 12px;
+        width: calc(100% - 24px);
         padding: 24px 12px 18px;
-        max-width: 100%;
+        max-width: none;
         border-radius: 16px;
+        opacity: 0.30;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .mlops-glass-stage:hover {
+        transform: translateY(-50%);
     }
 
     .lifecycle-icon-wrap {
