@@ -142,7 +142,7 @@ nav {
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
-    font-size: 0.88rem;
+    font-size: 1.1rem;
     font-weight: 800;
     letter-spacing: 0.08em;
     color: var(--text-primary);
