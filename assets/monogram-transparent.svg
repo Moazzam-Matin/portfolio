@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+<title id="t">Moazzam Matin Orbit Monogram — transparent</title><defs>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#12E7F4"/><stop offset=".44" stop-color="#4789FF"/><stop offset=".76" stop-color="#9A57F5"/><stop offset="1" stop-color="#C94CFA"/>
+</linearGradient>
+<linearGradient id="o" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#11E6F1"/><stop offset=".45" stop-color="#527CFF"/><stop offset=".72" stop-color="#A44CF6"/><stop offset="1" stop-color="#F000E8"/>
+</linearGradient>
+</defs><path d="M132 320 L132 120 C158 120 176 130 195 153 L258 231 L322 153 C341 130 359 120 386 120 L386 255 L336 280 L336 224 L258 314 L181 224 L181 335"
+fill="none" stroke="url(#m)" stroke-width="8" stroke-linejoin="miter"/>
+<path d="M132 319 L132 337 Q134 355 154 361 L181 370 L181 335 L181 224 L181 319 Z" fill="url(#m)"/>
+<path d="M336 280 L386 255 L386 321 Q386 349 363 362 L336 370 Z" fill="url(#m)"/>
+<path d="M353 292 C414 266 452 236 457 216 C461 199 438 187 393 185 C435 184 474 191 486 207 C504 231 458 264 393 294"
+fill="none" stroke="#D800F0" stroke-width="7" stroke-linecap="round"/>
+<path d="M105 330 C153 355 229 344 306 320 C376 299 434 270 464 242 C449 268 415 294 373 314 C293 352 203 374 143 366 C118 363 99 350 105 330 Z" fill="url(#o)"/>
+<path d="M105 330 C117 346 136 353 156 355 C143 355 128 354 116 348 C108 344 103 337 105 330 Z" fill="#11E6F1"/></svg>
