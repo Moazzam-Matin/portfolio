@@ -335,8 +335,8 @@ nav {
 }
 
 /* =========================================================
-   MLOPS LIFECYCLE (ICONIC GLASS VIEW)
-   Looks like it is behind a semi-transparent glass panel
+   MLOPS LIFECYCLE
+   Clean, borderless graphic positioned on the right of the hero
    ========================================================= */
 
 .mlops-glass-stage {
@@ -345,48 +345,27 @@ nav {
     right: max(20px, calc((100vw - var(--max-width)) / 2 - 20px));
     width: min(900px, 62vw);
     padding: 42px 32px 28px;
-    border-radius: 20px;
-    background: rgba(8, 22, 40, 0.48);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-top: 1.5px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    box-shadow:
-        0 24px 48px -8px rgba(0, 0, 0, 0.55),
-        inset 0 1px 1px rgba(255, 255, 255, 0.32),
-        inset 0 -1px 1px rgba(0, 0, 0, 0.35),
-        0 0 24px rgba(56, 189, 248, 0.08);
-    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    overflow: visible;
     z-index: 2;
     transform: translateY(-50%);
-    opacity: 0.38;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.82;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mlops-glass-stage:hover {
-    border-color: rgba(56, 189, 248, 0.35);
-    border-top-color: rgba(255, 255, 255, 0.50);
-    box-shadow:
-        0 30px 60px -8px rgba(0, 0, 0, 0.65),
-        inset 0 1px 2px rgba(255, 255, 255, 0.40),
-        0 0 32px rgba(56, 189, 248, 0.18);
+    opacity: 1;
     transform: translateY(calc(-50% - 2px));
 }
 
-/* Glass specular glare reflection */
+/* Disable the decorative reflection because the graphic has no glass panel. */
 .glass-glare {
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: linear-gradient(
-        130deg,
-        rgba(255, 255, 255, 0.14) 0%,
-        rgba(255, 255, 255, 0.02) 28%,
-        transparent 55%,
-        rgba(56, 189, 248, 0.04) 100%
-    );
-    pointer-events: none;
-    z-index: 3;
+    display: none;
 }
 
 /* Lifecycle horizontal track */
@@ -1095,7 +1074,7 @@ footer > div:first-child span {
     .mlops-glass-stage {
         right: 20px;
         width: min(720px, calc(100% - 40px));
-        opacity: 0.26;
+        opacity: 0.72;
     }
 
     .capabilities-grid {
@@ -1165,18 +1144,18 @@ footer > div:first-child span {
     }
 
     .mlops-glass-stage {
-        top: 54%;
+        top: 57%;
         right: 12px;
         width: calc(100% - 24px);
         padding: 24px 12px 18px;
         max-width: none;
-        border-radius: 16px;
-        opacity: 0.16;
+        opacity: 0.42;
         transform: translateY(-50%);
         pointer-events: none;
     }
 
     .mlops-glass-stage:hover {
+        opacity: 0.42;
         transform: translateY(-50%);
     }
 
