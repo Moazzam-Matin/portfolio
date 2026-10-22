@@ -516,15 +516,18 @@ nav {
     flex-shrink: 0;
 }
 
-.technology-item img {
-    width: 20px !important;
-    height: 20px !important;
-    max-width: 20px;
-    max-height: 20px;
-    flex: 0 0 20px;
+/* Explicitly constrain every logo in the technology marquee. */
+.technology-strip .technology-track .technology-item > img {
     display: block;
+    width: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    height: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    flex: 0 0 20px !important;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgb(151, 134, 134));
+    align-self: center;
 }
 
 .technology-item span {
