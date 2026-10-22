@@ -154,8 +154,8 @@ nav {
 }
 
 .logo img {
-    width: 32px;
-    height: 24px;
+    width: 64px;
+    height: 48px;
     object-fit: contain;
     display: block;
 }
@@ -228,7 +228,7 @@ nav {
    ========================================================= */
 
 #hero {
-    min-height: 82vh;
+    min-height: 75vh;
     padding: 104px max(24px, calc((100vw - var(--max-width)) / 2)) 52px;
     display: flex;
     align-items: center;
@@ -237,7 +237,7 @@ nav {
         radial-gradient(circle at 82% 65%, rgba(45, 212, 190, 0.12) 0%, transparent 45%),
         linear-gradient(180deg, #07131F 0%, #0B1F33 100%);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 #hero::after {
@@ -340,37 +340,21 @@ nav {
    ========================================================= */
 
 .mlops-glass-stage {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    width: 60%;
+    max-width: 60%;
+    margin-top: -60px;
     position: absolute;
-    top: 50%;
-    right: max(20px, calc((100vw - var(--max-width)) / 2 - 20px));
-    width: min(900px, 62vw);
-    padding: 42px 32px 28px;
-    border-radius: 20px;
-    background: rgba(8, 22, 40, 0.48);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-top: 1.5px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    box-shadow:
-        0 24px 48px -8px rgba(0, 0, 0, 0.55),
-        inset 0 1px 1px rgba(255, 255, 255, 0.32),
-        inset 0 -1px 1px rgba(0, 0, 0, 0.35),
-        0 0 24px rgba(56, 189, 248, 0.08);
-    overflow: hidden;
-    z-index: 2;
-    transform: translateY(-50%);
-    opacity: 0.38;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
+    bottom: 200px;
+    right: 30px;
+
 
 .mlops-glass-stage:hover {
-    border-color: rgba(56, 189, 248, 0.35);
-    border-top-color: rgba(255, 255, 255, 0.50);
-    box-shadow:
-        0 30px 60px -8px rgba(0, 0, 0, 0.65),
-        inset 0 1px 2px rgba(255, 255, 255, 0.40),
-        0 0 32px rgba(56, 189, 248, 0.18);
-    transform: translateY(calc(-50% - 2px));
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 /* Glass specular glare reflection */
@@ -378,13 +362,7 @@ nav {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(
-        130deg,
-        rgba(255, 255, 255, 0.14) 0%,
-        rgba(255, 255, 255, 0.02) 28%,
-        transparent 55%,
-        rgba(56, 189, 248, 0.04) 100%
-    );
+    background: none;
     pointer-events: none;
     z-index: 3;
 }
