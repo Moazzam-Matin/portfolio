@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="maarg — a lightweight, local-first Python experiment tracker. Track experiments with zero boilerplate."
+    >
+
+    <meta name="theme-color" content="#07131F">
+
+    <title>maarg | Project Case Study — Moazzam Matin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Existing portfolio styles -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- maarg case-study styles -->
+    <link rel="stylesheet" href="../css/maarg.css">
+</head>
+
+<body class="project-page">
+
+    <!-- Header -->
+    <header class="project-nav">
+        <a class="logo" href="../index.html" aria-label="Moazzam Matin — Home">
+            <img src="../assets/monogram-transparent.svg" alt="">
+            <span>MOAZZAM MATIN</span>
+        </a>
+
+        <nav class="project-nav-links" aria-label="Main navigation">
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="project-hero">
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">
+                    ← Back to Projects
+                </a>
+
+                <div class="maarg-brand">
+                    <img src="../assets/maarg_logo_dark.svg" alt="maarg logo">
+                </div>
+
+                <p class="eyebrow">
+                    OPEN SOURCE · PYTHON DEVELOPER TOOLING
+                </p>
+
+                <h1>
+                    maarg — Track Experiments with
+                    <span>Zero Boilerplate.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A lightweight, local-first experiment tracking library
+                    that helps machine learning engineers capture experiment
+                    inputs, metrics, artifacts, execution time, and failures
+                    with minimal instrumentation — without requiring a
+                    tracking server.
+                </p>
+
+                <div class="project-links">
+                    <a
+                        href="https://github.com/Moazzam-Matin/maarg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View on GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://pypi.org/project/maarg/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Install from PyPI ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project overview -->
+        <section class="project-overview">
+            <div class="container">
+                <p class="eyebrow">PROJECT OVERVIEW</p>
+
+                <h2>Experiment tracking, without the overhead.</h2>
+
+                <p>
+                    Machine learning experiments involve repeated runs,
+                    changing parameters, evaluation metrics, and generated
+                    artifacts. Tracking these consistently can introduce
+                    unnecessary boilerplate into the development workflow.
+                </p>
+
+                <p>
+                    <strong>maarg</strong> was built to make that process
+                    simpler. With a lightweight Python decorator, it records
+                    experiment details locally, letting developers focus on
+                    building and evaluating models rather than manually
+                    logging every run.
+                </p>
+
+                <div class="project-highlights">
+                    <article class="highlight">
+                        <h3>Zero Boilerplate</h3>
+                        <p>
+                            Track experiments through a simple decorator,
+                            keeping instrumentation out of the main
+                            experiment logic.
+                        </p>
+                    </article>
+
+                    <article class="highlight">
+                        <h3>Local-First</h3>
+                        <p>
+                            Store experiment runs in a local SQLite database
+                            without setting up a separate tracking server.
+                        </p>
+                    </article>
+
+                    <article class="highlight">
+                        <h3>Run Comparison</h3>
+                        <p>
+                            Retrieve, filter, compare, and rank experiment
+                            runs to help evaluate different configurations.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical implementation -->
+        <section class="project-technical">
+            <div class="container">
+                <p class="eyebrow">TECHNICAL IMPLEMENTATION</p>
+
+                <h2>A simple API backed by practical engineering.</h2>
+
+                <p>
+                    maarg centers its workflow on a Python decorator. The
+                    tracking layer captures run information, while a SQLite
+                    storage backend keeps records available for later
+                    inspection and comparison.
+                </p>
+
+                <div class="technical-grid">
+                    <article class="technical-card">
+                        <span class="technical-label">INTERFACE</span>
+                        <h3>Python Decorator</h3>
+                        <p>
+                            The <code>@track</code> interface keeps the
+                            experiment function readable and reduces the
+                            need for manual logging calls.
+                        </p>
+                    </article>
+
+                    <article class="technical-card">
+                        <span class="technical-label">STORAGE</span>
+                        <h3>SQLite Backend</h3>
+                        <p>
+                            Run records are stored locally in a SQLite
+                            database, with support for a configurable
+                            storage location.
+                        </p>
+                    </article>
+
+                    <article class="technical-card">
+                        <span class="technical-label">ANALYSIS</span>
+                        <h3>Run Inspection</h3>
+                        <p>
+                            Query and filter recorded runs, compare
+                            configurations, and identify top-performing
+                            runs using available metrics.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="code-panel">
+                    <div class="code-panel-header">
+                        example.py — illustrative usage
+                    </div>
+
+                    <pre><code>from maarg import track
+
+
+@track
+def train_model(learning_rate=0.01, epochs=10):
+    # Your model training code goes here.
+    # Return or record the results as supported
+    # by your experiment workflow.
+    return {
+        "learning_rate": learning_rate,
+        "epochs": epochs,
+    }
+
+
+train_model(learning_rate=0.01, epochs=10)
+train_model(learning_rate=0.001, epochs=20)</code></pre>
+                </div>
+
+                <p>
+                    This example illustrates the decorator-first workflow.
+                    Confirm the exact usage against maarg's current public
+                    API before treating it as a tested example.
+                </p>
+            </div>
+        </section>
+
+        <!-- Core capabilities -->
+        <section class="project-features">
+            <div class="container">
+                <p class="eyebrow">CORE CAPABILITIES</p>
+
+                <h2>Designed for the everyday experiment workflow.</h2>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <h3>Automatic Run Records</h3>
+                        <p>
+                            Capture experiment execution details such as
+                            inputs, runtime information, and failures through
+                            the tracking workflow.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Metric Tracking</h3>
+                        <p>
+                            Keep experiment metrics associated with their
+                            runs so different configurations can be
+                            inspected and compared.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Artifact Support</h3>
+                        <p>
+                            Associate supported artifacts, including
+                            generated plots, with experiment runs for
+                            later inspection.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Run Filtering</h3>
+                        <p>
+                            Retrieve and filter runs to focus on experiments
+                            that match particular criteria.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Experiment Comparison</h3>
+                        <p>
+                            Compare recorded runs and inspect their metrics
+                            when evaluating different model configurations.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Best-Run Selection</h3>
+                        <p>
+                            Use ranking and top-run utilities to identify
+                            promising experiments based on available metrics.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering approach -->
+        <section class="project-journey">
+            <div class="container">
+                <p class="eyebrow">ENGINEERING APPROACH</p>
+
+                <h2>Built around a deliberate design choice.</h2>
+
+                <p>
+                    The central design decision was to keep experiment
+                    tracking lightweight. Instead of requiring users to
+                    configure a separate service or add logging statements
+                    throughout their code, maarg uses a decorator-based
+                    interface and local storage.
+                </p>
+
+                <p>
+                    The project also emphasizes practical Python engineering:
+                    a focused public API, persistent run records, queryable
+                    experiment history, artifact handling, and tests for
+                    expected behavior.
+                </p>
+
+                <p>
+                    maarg is an ongoing open-source project. Its direction
+                    is guided by keeping the developer experience simple
+                    while improving the reliability and usefulness of
+                    experiment tracking.
+                </p>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        <section class="project-cta">
+            <div class="container">
+                <p class="eyebrow">EXPLORE THE PROJECT</p>
+
+                <h2>
+                    Less tracking boilerplate. More focus on experiments.
+                </h2>
+
+                <p>
+                    Explore the source code, review the implementation, or
+                    install maarg and try it in your own Python workflow.
+                </p>
+
+                <div class="project-links">
+                    <a
+                        href="https://github.com/Moazzam-Matin/maarg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Explore the Repository ↗
+                    </a>
+
+                    <a
+                        href="https://pypi.org/project/maarg/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View the PyPI Package ↗
+                    </a>
+
+                    <a href="../index.html">
+                        Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>
+            Designed and built by
+            <a href="../index.html">Moazzam Matin</a>
+            ·
+            <a
+                href="https://github.com/Moazzam-Matin/maarg"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                maarg on GitHub
+            </a>
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -145,7 +145,10 @@ nav {
     font-size: 1.1rem;
     font-weight: 800;
     letter-spacing: 0.08em;
-    color: var(--text-primary);
+    background: linear-gradient(135deg, #192f60b3, #81cfdb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: opacity 0.2s ease;
 }
 
@@ -354,12 +357,12 @@ nav {
     overflow: visible;
     z-index: 2;
     transform: translateY(-50%);
-    opacity: 0.82;
+    opacity: 0.20;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .mlops-glass-stage:hover {
-    opacity: 1;
+    opacity: 0.45;
     transform: translateY(calc(-50% - 2px));
 }
 
@@ -406,7 +409,7 @@ nav {
 
 .lifecycle-item:hover .lifecycle-icon-wrap {
     transform: scale(1.1);
-    border-color: #38BDF8;
+    border-color: #40748a;
     color: #FFFFFF;
     box-shadow:
         0 8px 24px rgba(0, 0, 0, 0.5),
@@ -422,7 +425,7 @@ nav {
 }
 
 .lifecycle-label {
-    font-size: 0.76rem;
+    font-size: 0.80rem;
     font-weight: 600;
     color: var(--text-secondary);
     letter-spacing: 0.02em;
@@ -452,7 +455,7 @@ nav {
     background: linear-gradient(
         90deg,
         rgba(56, 189, 248, 0.45),
-        rgba(251, 191, 36, 0.55),
+        rgba(212, 232, 97, 0.55),
         rgba(56, 189, 248, 0.45)
     );
     height: 1.5px;
@@ -463,8 +466,8 @@ nav {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #FBBF24;
-    box-shadow: 0 0 6px #FBBF24, 0 0 12px rgba(251, 191, 36, 0.6);
+    background: #212229;
+    box-shadow: 0 0 6px #17c7e2, 0 0 12px rgb(16, 212, 226);
     position: relative;
     z-index: 1;
 }
@@ -681,9 +684,26 @@ nav {
     transition: all 0.2s ease;
 }
 
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+
 .project-link:hover {
     color: #FFFFFF;
     transform: translateX(3px);
+}
+
+.link-icon img {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: invert(57%) sepia(83%) saturate(1700%)
+        hue-rotate(174deg) brightness(101%) contrast(101%);
 }
 
 /* =========================================================
