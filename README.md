@@ -10,7 +10,7 @@
   MLOps Engineer | Machine Learning | Python Developer Tools
 </p>
 
-## TECHNOLOGIES & TOOLS
+## TOOLS & TECHNOLOGIES
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
@@ -53,17 +53,13 @@ A lightweight, local-first Python experiment tracking library designed to track 
 
 A recommendation system exploring collaborative filtering, model evaluation, and experiment tracking with MLflow.
 
-### [Gulf-auto price](https://github.com/Moazzam-Matin/gulf-auto-price)
+### [Gulf_Auto_Price_Intelligence](https://github.com/Moazzam-Matin/Gulf_Auto_Price_Intelligence)
 
 A project focused on vehicle price analysis and estimation for Gulf markets.
 
-### [pyq-concept](https://github.com/Moazzam-Matin/pyq-concept)
+### [pyq-concept-graph](https://github.com/Moazzam-Matin/pyq-concept-graph)
 
 A Python learning project focused on concepts and practice through previous-year questions.
-
-### [Personal Portfolio](https://github.com/Moazzam-Matin/portfolio)
-
-My personal website showcasing my technical interests, engineering work, and open-source contributions.
 
 ## CONNECT WITH ME
 
