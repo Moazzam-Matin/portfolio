@@ -3,6 +3,8 @@
    Polished, cohesive dark theme with refined spacing
    ========================================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&family=VT323&family=Exile&family=Space+Grotesk&display=swap');
+
 :root {
     /* Palette */
     --bg-main: #07131F;
@@ -90,6 +92,10 @@ section[id] {
     margin-bottom: 30px;
 }
 
+.technical-arsenal {
+    padding: 80px 0;
+}
+
 .eyebrow {
     font-family: var(--font-mono);
     font-size: 0.74rem;
@@ -128,7 +134,8 @@ header {
 }
 
 nav {
-    width: min(100% - 32px, var(--max-width));
+    position: relative;
+    width: min(100% - 16px, var(--max-width));
     min-height: 58px;
     margin: 0 auto;
     display: flex;
@@ -138,9 +145,10 @@ nav {
 }
 
 .logo {
+    margin-left: -42px;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 4px;
     flex-shrink: 0;
     font-size: 1.1rem;
     font-weight: 800;
@@ -150,6 +158,18 @@ nav {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: opacity 0.2s ease;
+}
+
+.logo span {
+    font-family: 'Exile', cursive;
+    font-weight: 400;
+    color: rgb(63, 150, 227);
+    -webkit-text-fill-color: rgb(192, 214, 233);
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    letter-spacing: 4px;
+    font-size: 1.25rem;
 }
 
 .logo:hover {
@@ -164,8 +184,12 @@ nav {
 }
 
 .nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 28px;
 }
 
@@ -190,10 +214,6 @@ nav {
     transition: width 0.2s ease;
 }
 
-.nav-links a:hover {
-    color: var(--cyan);
-}
-
 .nav-links a:hover::after,
 .nav-links a.active::after {
     width: 100%;
@@ -206,24 +226,47 @@ nav {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 22px;
+    margin-right: -36px;
+}
+
+.nav-actions a svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .nav-actions a {
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border);
-    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #81cfdb;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-actions a .discord-icon {
+    width: 23px;
+    height: 23px;
+}
+
+.nav-actions a .mail-icon {
+    width: 25px;
+    height: 25px;
 }
 
 .nav-actions a:hover {
-    background: rgba(56, 189, 248, 0.12);
-    border-color: var(--cyan);
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 /* =========================================================
@@ -496,12 +539,101 @@ nav {
     padding: 14px 0;
     display: flex;
     align-items: center;
-    background: #c7d2d4;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    background: rgba(11, 31, 51, 0.75);
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, rgb(80, 77, 110) 8%, rgb(130, 119, 156) 92%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, rgb(94, 91, 98) 8%, rgb(73, 71, 79) 92%, transparent);
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 8%,
+        black 92%,
+        transparent
+    );
+}
+
+
+
+.technical-arsenal .section-heading {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.technical-arsenal .section-heading h2{
+    letter-spacing: 6px;
+    font-family: 'VT323', monospace;
+}
+
+
+/* TECHNICAL ARSENAL CATEGORIES — PLAIN TEXT COLUMNS */
+.technology-categories {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    row-gap: 24px;
+    margin-top: 40px;
+    padding: 32px;
+    background: rgba(11, 31, 51, 0.45);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 2px;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 2px;
+}
+
+.technology-category {
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    transition: none;
+}
+
+.technology-category:hover {
+    background: none;
+    border: none;
+    transform: none;
+}
+
+
+.technology-category h3 {
+    margin: 0 0 16px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0;
+}
+
+.technology-category ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.technology-category li {
+    padding: 0;
+    color: var(--text-secondary);
+    background: none;
+    border: none;
+    border-radius: 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
 }
 
 .technology-track {
@@ -537,7 +669,11 @@ nav {
 .technology-item span {
     font-size: 0.8rem;
     font-weight: 600;
-    color: #0b0f13;
+    color: #ffffff;
+}
+
+.technology-strip .github-icon {
+    filter: brightness(0) invert(1);
 }
 
 @keyframes technology-marquee {
