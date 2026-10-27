@@ -59,6 +59,22 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+
+/* =========================================================
+   SHARED DIGITAL CLOUD BACKGROUND
+   ========================================================= */
+
+.digital-clouds {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
 }
 
 a {
@@ -260,10 +276,6 @@ nav {
     height: 23px;
 }
 
-.nav-actions a .mail-icon {
-    width: 25px;
-    height: 25px;
-}
 
 .nav-actions a:hover {
     color: #ffffff;
