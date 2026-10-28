@@ -108,10 +108,6 @@ section[id] {
     margin-bottom: 30px;
 }
 
-.technical-arsenal {
-    padding: 80px 0;
-}
-
 .eyebrow {
     font-family: var(--font-mono);
     font-size: 0.74rem;
@@ -143,7 +139,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--bg-glass);
+    background: transparent;
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -279,6 +275,7 @@ nav {
 
 .nav-actions a:hover {
     color: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* =========================================================
@@ -290,27 +287,9 @@ nav {
     padding: 104px max(24px, calc((100vw - var(--max-width)) / 2)) 52px;
     display: flex;
     align-items: center;
-    background:
-        radial-gradient(circle at 18% 22%, rgba(37, 99, 235, 0.18) 0%, transparent 40%),
-        radial-gradient(circle at 82% 65%, rgba(45, 212, 190, 0.12) 0%, transparent 45%),
-        linear-gradient(180deg, #07131F 0%, #0B1F33 100%);
+    background: transparent;
     position: relative;
     overflow: hidden;
-}
-
-#hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(7, 19, 31, 0.92) 0%,
-        rgba(7, 19, 31, 0.68) 42%,
-        rgba(7, 19, 31, 0.30) 72%,
-        rgba(7, 19, 31, 0.18) 100%
-    );
-    pointer-events: none;
-    z-index: 1;
 }
 
 .hero-content {
@@ -330,6 +309,10 @@ nav {
     letter-spacing: -0.04em;
     font-weight: 800;
     color: #FFFFFF;
+}
+
+.highlight-notebook {
+    color: #63d8ff;
 }
 
 .hero-description {
@@ -388,8 +371,23 @@ nav {
 
 .button-secondary:hover {
     background: rgba(255, 255, 255, 0.10);
-    border-color: var(--border-light);
+    border-color: var(--blue-dark);
     color: #FFFFFF;
+}
+
+.hero-actions .button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.hero-actions .button-secondary svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    fill: currentColor;
 }
 
 /* =========================================================
@@ -402,7 +400,7 @@ nav {
     top: 50%;
     right: max(20px, calc((100vw - var(--max-width)) / 2 - 20px));
     width: min(900px, 62vw);
-    padding: 42px 32px 28px;
+    padding: 10px;
     border: 0;
     border-radius: 0;
     background: transparent;
@@ -551,7 +549,7 @@ nav {
     padding: 14px 0;
     display: flex;
     align-items: center;
-    background: rgba(11, 31, 51, 0.75);
+    /*background: rgba(11, 31, 51, 0.75);*/
     border-top: 1px solid rgba(56, 189, 248, 0.2);
     border-bottom: 1px solid rgba(56, 189, 248, 0.2);
     overflow: hidden;
@@ -571,7 +569,14 @@ nav {
     );
 }
 
+/* =========================================================
+   TECHNICAL ARSENAL
+   ========================================================= */
 
+.technical-arsenal {
+    padding: 80px 0;
+    padding-bottom: 20px;
+}
 
 .technical-arsenal .section-heading {
     width: 100%;
@@ -595,8 +600,8 @@ nav {
     row-gap: 24px;
     margin-top: 40px;
     padding: 32px;
-    background: rgba(11, 31, 51, 0.45);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    /*background: rgba(11, 31, 51, 0.45);
+    border: 1px solid rgba(56, 189, 248, 0.2);*/
     border-radius: 2px;
     font-family: "Space Grotesk", sans-serif;
     letter-spacing: 2px;
@@ -703,6 +708,29 @@ nav {
 
 #projects {
     background: var(--bg-main);
+    padding-top: 20px;
+}
+
+#projects .section-heading {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto 32px;
+}
+
+#projects .section-heading h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-bottom: 8px;
+}
+
+#projects .section-heading p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .projects-grid {
